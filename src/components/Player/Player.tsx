@@ -8,7 +8,7 @@ const Player:FC = () => {
 
     useEffect(() => {
 		const script = document.createElement("script");
-		script.src = "/player.js";
+		script.src = "/Cinema/player.js";
 		document.body.appendChild(script);
 
 		return () => {
