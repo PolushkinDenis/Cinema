@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, FC } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Film from './components/Film/Film';
+import Films from './components/Films/Films';
+import Home from './components/Home/Home';
+import Player from './components/Player/Player';
 import './App.css';
+import Header from './components/Header/Header';
+import { useAppDispatch, useAppSelector } from './hooks/redux';
+import { fetchFilms } from './store/action-creators/films';
+import { filmsSlice } from './store/reducers/filmsSlice';
 
-function App() {
+const App: FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/films" element={<Films />} />
+        <Route path="/film/:id" element={<Film />} />
+        <Route path="/player/:id" element={<Player />} />
+      </Routes>
+    </>
+
   );
 }
 

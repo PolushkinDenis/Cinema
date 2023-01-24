@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    height: 60px;
+
+    .header-home a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .header-search {}
+}
