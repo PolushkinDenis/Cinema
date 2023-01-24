@@ -8,7 +8,7 @@ interface IButton {
 const Button: FC<IButton> = ({title}) => {
 
     return (
-        <button className="button">{title}</button>
+        <button className="sliding-button">{title}</button>
     )
 }
 

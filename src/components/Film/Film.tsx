@@ -58,8 +58,7 @@ const Film: FC = () => {
 
                             <p className='content-description'>{film?.shortDescription || film?.description}</p>
 
-                            <div></div>
-                            <div className='film-info_vatch'><NavLink className="film-info_link" to={`/player/${id}`}>Смотреть</NavLink></div>
+                            <div className='film-info_vatch'><NavLink className="film-info_link" to={`/player/${id}`}><Button title={"Смотреть"}></Button></NavLink></div>
 
                         </div>
                     </div>
@@ -75,8 +74,7 @@ const Film: FC = () => {
 
                             <p className='content-description'>{film?.shortDescription || film?.description}</p>
 
-                            <div></div>
-                            <div className='film-info_vatch'><NavLink className="film-info_link" to={`/player/${id}`}>Смотреть</NavLink></div>
+                            <div className='film-info_vatch'><NavLink className="film-info_link" to={`/player/${id}`}><Button title={"Смотреть"}></Button></NavLink></div>
 
                         </div>
                     </div>
