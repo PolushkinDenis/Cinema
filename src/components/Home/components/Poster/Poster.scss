@@ -1,0 +1,42 @@
+.header__poster {
+    background-image: url(../../../../../public/avatar.jpg);
+    // height: 600px;
+    height: calc(100vh - 60px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    background-color: var(--color-light-dark);
+    display: flex;
+    align-items: center;
+    .header__poster-text {
+        max-width: 1366px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 10px;
+        h1 {
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 40px;
+        }
+        p {
+            max-width: 400px;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 40px;
+        }
+        button {
+            background-color: #000;
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            color: #ffffff;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1, 1.1);
+            }
+        }
+    }
+}

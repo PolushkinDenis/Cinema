@@ -6,20 +6,25 @@ import { fetchFilm } from '../../../../store/action-creators/film'
 import './Poster.scss'
 
 const Poster: FC = () => {
-    // const { film, error, loading } = useAppSelector(state => state.filmReducer)
-    // const dispatch = useAppDispatch()
+    const { film, error, loading } = useAppSelector(state => state.filmReducer)
+    const dispatch = useAppDispatch()
 
-    // console.log(film)
+    console.log(film)
 
-    // useEffect(() => {
-    //     const id: string = '1219909'
-    //     dispatch(fetchFilm(id))
-    // }, [])
+    useEffect(() => {
+        const id: string = '505898'
+        dispatch(fetchFilm(id))
+    }, [])
 
     return (
-        // <div style={{backgroundImage: `url(${film?.posterUrl })`}}>
-        <div>
-            Poster
+        //<div className='header__poster' style={{backgroundImage: `url(${film?.posterUrl })`}}>
+
+        <div className='header__poster'>
+            <div className='header__poster-text'>
+                <h1>{film?.nameRu}</h1>
+                <p>{film?.description}</p>
+                <button>Подробнее</button>
+            </div>
         </div>
     )
 }

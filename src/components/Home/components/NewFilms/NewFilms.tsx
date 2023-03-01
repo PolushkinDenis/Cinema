@@ -14,7 +14,8 @@ const NewFilms: FC = () => {
     const dispatch = useAppDispatch()
     console.log(films)
 
-    const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films?type=FILM&yearFrom=2021&yearTo=2022&order=NUM_VOTE`
+    const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films?type=FILM&yearFrom=2022&yearTo=2022&order=NUM_VOTE`
+    // const url = `https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=2022&yearTo=2023&page=1`
 
     useEffect(() => {
         dispatch(fetchFilms(url))

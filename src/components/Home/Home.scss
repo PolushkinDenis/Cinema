@@ -1,8 +1,9 @@
 .home {
     color: white;
     .home-film {
-
-        margin: 50px 50px 0 50px;
+        max-width: 1366px;
+        margin: 60px auto 0 auto;
+        padding: 0 10px;
         .title-newfilms {
             display: flex;
             flex-direction: row;
@@ -13,16 +14,30 @@
         .title-newfilms button {
             width: 120px;
             height: 40px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1, 1.1);
+            }
         }
-
+        
         .newFilms {
             display: grid;
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media (max-width: 770px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
             @media (max-width: 450px) {
                 grid-template-columns: 1fr;
                 justify-items: center
             }
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            row-gap: 140px;
+            row-gap: 50px;
+            column-gap: 20px;
+            justify-items: stretch;   
         }
     }
 
