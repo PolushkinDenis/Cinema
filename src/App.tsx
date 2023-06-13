@@ -9,17 +9,22 @@ import Header from './components/Header/Header';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchFilms } from './store/action-creators/films';
 import { filmsSlice } from './store/reducers/filmsSlice';
+import { useTranslation } from "react-i18next";
 
 const App: FC = () => {
+  // const { t, i18n } = useTranslation();
 
+  // const changeLanguage = (language) => {
+  //   i18n.changeLanguage(language);
+  // };
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/films" element={<Films />} />
-        <Route path="/film/:id" element={<Film />} />
-        <Route path="/player/:id" element={<Player />} />
+        <Route path="/Cinema" element={<Home />} />
+        <Route path="/Cinema/films" element={<Films />} />
+        <Route path="/Cinema/film/:id" element={<Film />} />
+        <Route path="/Cinema/player/:id" element={<Player />} />
       </Routes>
     </>
 

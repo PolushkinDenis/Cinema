@@ -29,11 +29,32 @@
         button {
             background: none;
             margin-left: 10px;
+            border: none;
             .svg-icon {
                 width: 25px;
             }
             &:hover {
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .header {
+        .header-home {
+            a {
+                font-size: 14px
+            }
+        }
+        .header-search {
+            input {
+                width: 200px
+            }
+            button {
+               .svg-icon {
+                width: 20px;
+               } 
             }
         }
     }

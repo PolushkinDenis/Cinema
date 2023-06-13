@@ -14,7 +14,7 @@ const MovieItem: FC<HomeComponentProps> = ({ film }) => {
     const navigate = useNavigate()
 
     const gotoFilm = () => {
-        navigate(`/film/${film.kinopoiskId}`, { state: film })
+        navigate(`/Cinema/film/${film.kinopoiskId}`, { state: film })
     }
 
     return (

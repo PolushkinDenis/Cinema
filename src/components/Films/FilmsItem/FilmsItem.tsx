@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useState, memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IFilms, IFilm } from '../../../types/IFilms'
 import './FilmsItem.scss'
@@ -8,6 +8,7 @@ interface FilmsItemProps {
 }
 
 const FilmsItem: FC<FilmsItemProps> = ({ film }) => {
+
     const [genres, setGenres] = useState("")
     const navigate = useNavigate()
 
@@ -18,9 +19,6 @@ const FilmsItem: FC<FilmsItemProps> = ({ film }) => {
     const createGenres = () => {
         let newGenres = ""
         film.genres.map((genre, index) => {
-            console.log("Индес" + index)
-            console.log("Массив" + film.genres.length)
-
             if (index === film.genres.length-1) {
                 newGenres += genre.genre
             }
@@ -75,4 +73,4 @@ const FilmsItem: FC<FilmsItemProps> = ({ film }) => {
     )
 }
 
-export default FilmsItem
+export default memo(FilmsItem)
